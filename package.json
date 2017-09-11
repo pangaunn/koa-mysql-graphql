@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "koa": "^2.3.0"
+    "koa": "^2.3.0",
+    "koa-graphql": "^0.7.3",
+    "koa-router": "^7.2.1"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
