@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "graphql": "^0.11.3",
+    "graphql-tools": "^1.2.2",
+    "graphql-tools-types": "^1.1.11",
     "koa": "^2.3.0",
     "koa-graphql": "^0.7.3",
     "koa-router": "^7.2.1"
