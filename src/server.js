@@ -1,8 +1,15 @@
 const Koa = require('koa')
-const app = new Koa()
+const Router = require('koa-router')
+const graphqlHTTP = require('koa-graphql')
 
-app.use(ctx => {
-  ctx.body = 'Hello World'
-})
+const app = new Koa()
+const router = new Router()
+
+const graphqlSchema = require('./schema')
+
+router.all('/graphql', graphqlHTTP({
+  schema: graphqlSchema,
+  graphiql: true
+}))
 
 app.listen(3000)
