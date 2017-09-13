@@ -12,5 +12,6 @@ router.all('/graphql', graphqlHTTP({
   graphiql: true
 }))
 
+app.use(router.routes()).use(router.allowedMethods());
 app.listen(3000)
 console.log('server running on port 3000')
