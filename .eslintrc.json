@@ -11,6 +11,7 @@
     "no-console": "off",
     "generator-star-spacing": "off",
     "require-await": "error",
+    "semi": "error",
     "indent": [
       "error",
       2
