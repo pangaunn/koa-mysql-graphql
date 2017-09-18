@@ -1,0 +1,33 @@
+version: '3'
+services:
+  api:
+    hostname: api
+    image: mynode
+    volumes:
+      - ./:/node/app
+    environment:
+      DB_HOSTNAME: mysql
+      DB_USER: root
+      DB_PASSWORD: 1234
+      DB_NAME: test_graphql
+    ports:
+      - 3000:3000
+    networks:
+      - apinetwork
+    entrypoint:
+      - nodemon
+      - ./src/server.js
+    restart: always
+  mysql:
+    hostname: maria
+    image: mariadb:latest
+    volumes:
+      - .tmp:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: test_graphql
+    networks:
+      - apinetwork
+networks:
+  apinetwork:
+    driver: bridge
