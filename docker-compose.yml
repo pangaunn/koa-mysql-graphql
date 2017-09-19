@@ -19,8 +19,8 @@ services:
       - ./src/server.js
     restart: always
   mysql:
-    hostname: maria
-    image: mariadb:latest
+    hostname: mysql
+    image: mysql:8.0.1
     volumes:
       - .tmp:/var/lib/mysql
     environment:
