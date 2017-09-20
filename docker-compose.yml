@@ -16,7 +16,8 @@ services:
       - apinetwork
     entrypoint:
       - nodemon
-      - ./src/server.js
+      - -L
+      - src/server.js
     restart: always
   mysql:
     hostname: mysql
