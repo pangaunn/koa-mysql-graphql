@@ -11,4 +11,4 @@ RUN npm install
 COPY . .
 EXPOSE 3000
 
-ENTRYPOINT ["nodemon", "./src/server.js"]
+ENTRYPOINT ["nodemon", "-L", "./src/server.js"]
